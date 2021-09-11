@@ -1,11 +1,9 @@
 package draylar.danceofgrowth.config;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
-import me.sargunvohra.mcmods.autoconfig1u.shadowed.blue.endless.jankson.Comment;
+import draylar.omegaconfig.api.Comment;
+import draylar.omegaconfig.api.Config;
 
-@Config(name = "danceofgrowth")
-public class DanceOfGrowthConfig implements ConfigData {
+public class DanceOfGrowthConfig implements Config {
 
     @Comment(value = "The chance for a nearby plant to receive the bonemeal effect when a player hits the crouch button. 10 is 1/10, 20 is 1/20.")
     public int chance = 25;
@@ -32,4 +30,9 @@ public class DanceOfGrowthConfig implements ConfigData {
     public boolean growGrass = false;
     public float rainModifier = 1.1f;
     public boolean showParticles = true;
+
+    @Override
+    public String getName() {
+        return "danceofgrowth";
+    }
 }

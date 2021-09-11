@@ -2,8 +2,7 @@ package draylar.danceofgrowth;
 
 import draylar.danceofgrowth.config.DanceOfGrowthConfig;
 import draylar.danceofgrowth.impl.PlayerReader;
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
-import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
+import draylar.omegaconfig.OmegaConfig;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
@@ -20,7 +19,7 @@ import java.util.List;
 
 public class DanceOfGrowth implements ModInitializer {
 
-    public static final DanceOfGrowthConfig CONFIG = AutoConfig.register(DanceOfGrowthConfig.class, JanksonConfigSerializer::new).getConfig();
+    public static final DanceOfGrowthConfig CONFIG = OmegaConfig.register(DanceOfGrowthConfig.class);
 
     @Override
     public void onInitialize() {
